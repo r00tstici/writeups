@@ -1,0 +1,32 @@
+import
+ast
+eval
+=
+pickle
+os
+subprocess
+i love blacklisting words!
+input
+sys
+windows users
+print
+execfile
+hungrybox
+builtins
+open
+most of these are in here just to confuse you
+_
+dict
+[
+>
+<
+:
+;
+]
+exec
+hah almost forgot that one
+for
+@
+dir
+yah have fun
+file
