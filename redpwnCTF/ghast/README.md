@@ -1,4 +1,4 @@
-In this challenge we are given a link to a website and his source code.
+In this challenge we are given a link to a website (http://chall.2019.redpwn.net:8008/) and its source code.
 
 Giving a fast look at the source code is easy to notice that the accounts are saved in a Map with an id like "ghast:0", where 0 is an increasing number, converted in base64 without the equal sign.
 
