@@ -233,7 +233,7 @@ Redis is a **key-value** database, so I needed to know what keys were in the db.
 
 > **Note**: Every line must be teminated with `\r\n`, so URLEncoded is `%0d%0a`
 
-**Get all keys : **
+**Get all keys:**
 
     *2
     $4 
@@ -256,7 +256,7 @@ Server response was:
 
 **Bingo**, there was a key called flag!
 
-**Get flag key value: **
+**Get flag key value:**
 
 
     *2 
@@ -280,5 +280,5 @@ And the response was:
     
 
 
-So, flag is:
+So, **flag** is:
 `flag{r3d_pWn_is_buT_n0T_pwN}`
