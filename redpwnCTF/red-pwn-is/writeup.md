@@ -1,8 +1,8 @@
-###Challenge
+#Challenge
 The web challenge said:
 > Find out what redpwn is doing with red-pwn-is
 > 
-hint: red-pwn-is could be better thought of as red-is-pwn
+> hint: red-pwn-is could be better thought of as red-is-pwn
 
 The site allowed to ping an URL, so the first thing that come up in my mind was a SSRF attack.
 In facts, trying with http://127.0.0.1, it returned:
@@ -46,7 +46,7 @@ only the http protocol is supported
 After a long time, I understood the given hint, it was a wordplay with **Red**-pwn-**is**.
 Personally, I didn&apos;t know anything about Redis, thus I started to find out how it works.
 
-###Redis
+#Redis
 Redis works on port 6379, hence I typed:
 
 `http:127.0.0.1:6379`
@@ -229,7 +229,7 @@ that returned:
 
 Redis is a **key-value** database, so I needed to know what keys were in the db.
 
-###Exploit
+#Exploit
 
 > **Note**: Every line must be teminated with `\r\n`, so URLEncoded is `%0d%0a`
 
