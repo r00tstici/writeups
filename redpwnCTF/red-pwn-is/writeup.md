@@ -65,11 +65,11 @@ Finally, I found this [resource](https://www.agarri.fr/blog/archives/2014/09/11/
 
 There are some fundamentals things to know to send HTTP request(*form link above*):
 > 
-- everything is separated with new lines (here CRLF)
-- a command starts with &apos;&ast;&apos; and the number of arguments ("&ast;1" + CRLF)
-- then we have the arguments, one by one:
-   - string: the &apos;$&apos; character + the string size ("$4" + CRLF) + the string value ("TIME" + CRLF)
-   - integer: the &apos;:&apos; character + the integer in ASCII (":42" + CRLF)
+	- everything is separated with new lines (here CRLF)
+	- a command starts with '*' and the number of arguments ("*1" + CRLF)
+	- then we have the arguments, one by one:
+	   - string: the '$' character + the string size ("$4" + CRLF) + the string value ("TIME" + CRLF)
+	   - integer: the ':' character + the integer in ASCII (":42" + CRLF)
 
 
 Therefore, following the [command list](https://redis.io/commands), a simple INFO request:
