@@ -1,2 +1,2 @@
 # writeups
-Writeups for each ctf we have partecipated
+Writeups for each ctf we partecipated
