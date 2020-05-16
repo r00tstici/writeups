@@ -49,7 +49,7 @@ Personally, I didn&apos;t know anything about Redis, thus I started to find out 
 ### Redis
 Redis works on port 6379, hence I typed:
 
-`http:127.0.0.1:6379`
+`http://127.0.0.1:6379`
 
 Server response was:
 ```
