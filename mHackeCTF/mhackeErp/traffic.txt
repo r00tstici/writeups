@@ -1,0 +1,709 @@
+GET /oauth2/authorization/custom HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gg.ZT0POoTpWnOcVN0nuUKBypnG074
+
+HTTP/1.1 302 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Set-Cookie: JSESSIONID=97F3F8D639E5793B4FF41211415E3764; Path=/; HttpOnly
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Location: http://10.10.26.1:8080/oauth2/authorize?response_type=code&client_id=b84172a44bab4468a373bc569a0ea0c9&state=14L7lHtrwRr4Qg2JqNhxFox0dLOoZZxUYfpvUWokYvc%3D&redirect_uri=http://10.10.26.1:8080/login/oauth2/code/custom
+Content-Length: 0
+Date: Sat, 17 Oct 2020 14:19:47 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+GET /oauth2/authorize?response_type=code&client_id=b84172a44bab4468a373bc569a0ea0c9&state=14L7lHtrwRr4Qg2JqNhxFox0dLOoZZxUYfpvUWokYvc%3D&redirect_uri=http://10.10.26.1:8080/login/oauth2/code/custom HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gg.ZT0POoTpWnOcVN0nuUKBypnG074; JSESSIONID=97F3F8D639E5793B4FF41211415E3764
+
+HTTP/1.1 302 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Location: http://10.10.26.1:5000/oauth2/authorize?response_type=code&client_id=b84172a44bab4468a373bc569a0ea0c9&state=14L7lHtrwRr4Qg2JqNhxFox0dLOoZZxUYfpvUWokYvc%3D&redirect_uri=http://10.10.26.1:8080/login/oauth2/code/custom
+Content-Language: en-US
+Content-Length: 0
+Date: Sat, 17 Oct 2020 14:19:47 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+GET /login/oauth2/code/custom?code=eVq556FHH2A95nf1RHPZNTAhl5UZci&state=14L7lHtrwRr4Qg2JqNhxFox0dLOoZZxUYfpvUWokYvc%3D HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=97F3F8D639E5793B4FF41211415E3764; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+
+HTTP/1.1 302 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Set-Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; Path=/; HttpOnly
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Location: http://10.10.26.1:8080/
+Content-Length: 0
+Date: Sat, 17 Oct 2020 14:19:47 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+GET / HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+
+HTTP/1.1 302 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Location: http://10.10.26.1:8081
+Content-Language: en-US
+Content-Length: 0
+Date: Sat, 17 Oct 2020 14:19:47 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 314
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="create"><arguments><type>com.mhackectf.erp.Api.dto.CreateTicketDto</type><value><CreateTicketDto><title>test</title><content>test</content><author>test</author><priority>critical</priority></CreateTicketDto></value></arguments></methodCall>HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:48 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+a6
+{"id":20,"title":"test","status":"PENDING","content":"test","author":"test","assignedTo":null,"priority":null,"createdAt":"2020-10-17T14:19:48.254Z","updatedAt":null}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 299
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>20</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:48 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+a2
+{"id":20,"title":"test","status":"PENDING","content":"test","author":"test","assignedTo":null,"priority":null,"createdAt":"2020-10-17T14:19:48Z","updatedAt":null}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 299
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>19</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:48 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+b4
+{"id":19,"title":"new ticket","status":"PENDING","content":"mauro fix this!","author":"Marco","assignedTo":null,"priority":null,"createdAt":"2020-10-17T14:19:10Z","updatedAt":null}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 299
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>18</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:48 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+a2
+{"id":18,"title":"test","status":"PENDING","content":"test","author":"test","assignedTo":null,"priority":null,"createdAt":"2020-10-17T14:18:48Z","updatedAt":null}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 299
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>17</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:48 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+a2
+{"id":17,"title":"test","status":"PENDING","content":"test","author":"test","assignedTo":null,"priority":null,"createdAt":"2020-10-17T14:18:38Z","updatedAt":null}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 299
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>16</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:48 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+b4
+{"id":16,"title":"new ticket","status":"PENDING","content":"mauro fix this!","author":"Marco","assignedTo":null,"priority":null,"createdAt":"2020-10-17T14:17:56Z","updatedAt":null}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 299
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>15</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:48 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+a2
+{"id":15,"title":"test","status":"PENDING","content":"test","author":"test","assignedTo":null,"priority":null,"createdAt":"2020-10-17T14:17:49Z","updatedAt":null}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 299
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>14</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:48 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+104
+{"id":14,"title":"e183cba6870727735ee6110836df74941d4593c9540e300a16dbe0b7ec8cfb25","status":"PENDING","content":"MHACK{EwAjAAUAtd9ea4mzcI3fDiOLsfeVKBZG}","author":"admin","assignedTo":null,"priority":"HIGH","createdAt":"2020-10-17T14:17:47Z","updatedAt":null}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 299
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>13</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:48 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+72
+{"timestamp":"2020-10-17T14:19:49.103+00:00","status":404,"error":"Not Found","message":"","path":"/api/tickets/"}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 299
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>12</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:48 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+72
+{"timestamp":"2020-10-17T14:19:49.198+00:00","status":404,"error":"Not Found","message":"","path":"/api/tickets/"}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 299
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>11</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:49 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+72
+{"timestamp":"2020-10-17T14:19:49.298+00:00","status":404,"error":"Not Found","message":"","path":"/api/tickets/"}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 299
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>10</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:49 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+72
+{"timestamp":"2020-10-17T14:19:49.426+00:00","status":404,"error":"Not Found","message":"","path":"/api/tickets/"}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 298
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>9</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:49 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+72
+{"timestamp":"2020-10-17T14:19:49.539+00:00","status":404,"error":"Not Found","message":"","path":"/api/tickets/"}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 298
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>8</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:49 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+72
+{"timestamp":"2020-10-17T14:19:49.639+00:00","status":404,"error":"Not Found","message":"","path":"/api/tickets/"}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 298
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>7</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:49 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+72
+{"timestamp":"2020-10-17T14:19:49.741+00:00","status":404,"error":"Not Found","message":"","path":"/api/tickets/"}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 298
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>6</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:49 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+72
+{"timestamp":"2020-10-17T14:19:49.908+00:00","status":404,"error":"Not Found","message":"","path":"/api/tickets/"}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 298
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>5</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:49 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+72
+{"timestamp":"2020-10-17T14:19:50.075+00:00","status":404,"error":"Not Found","message":"","path":"/api/tickets/"}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 298
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>4</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:49 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+72
+{"timestamp":"2020-10-17T14:19:50.205+00:00","status":404,"error":"Not Found","message":"","path":"/api/tickets/"}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 298
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>3</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:50 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+a1
+{"id":3,"title":"test","status":"PENDING","content":"test","author":"test","assignedTo":null,"priority":null,"createdAt":"2020-10-17T14:16:48Z","updatedAt":null}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 298
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>2</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:50 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+a1
+{"id":2,"title":"test","status":"PENDING","content":"test","author":"test","assignedTo":null,"priority":null,"createdAt":"2020-10-17T14:16:38Z","updatedAt":null}
+0
+
+POST /api/tickets/ HTTP/1.1
+Host: 10.10.26.1:8080
+User-Agent: python-requests/2.21.0
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: JSESSIONID=A5E880C066C9955FFFC0C946C51A1BC8; session=.eJwljjGOQzEIBe_iOgUGY0wuEwEG7bY_SbXau8dS6jd6M3_tUVc-f9r9db3z1h6_u91b12L22RFIsJhyj4iKYhNPHY5bopdq8KhUomnqnBsLAAhGYBSsHMhyYM_a3dYiByRhQOisUziHF53THdN82jJR6zh2kLYT8n7m9a1hXbnqqGHbmcWNOnMnG0OOZ7X_D0AsOF0.X4r9gw.Ss9U0rOvFkPPA0Iqou12tvRyl6c
+Content-Length: 298
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?><methodCall name="get"><arguments><type>com.mhackectf.erp.Api.dto.GetTicketDto</type><value><GetTicketDto><ticketID>1</ticketID><captcha>1*1</captcha><userInsertedCaptcha>1</userInsertedCaptcha></GetTicketDto></value></arguments></methodCall>HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Sat, 17 Oct 2020 14:19:50 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+a1
+{"id":1,"title":"test","status":"PENDING","content":"test","author":"test","assignedTo":null,"priority":null,"createdAt":"2020-10-17T14:15:49Z","updatedAt":null}
+0
+
