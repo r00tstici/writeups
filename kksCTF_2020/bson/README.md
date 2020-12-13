@@ -9,7 +9,10 @@ Solved by: 4cul, 01baf, crypt3d4ta
 
 This is the last time i'm asking, who the f is bson??
 Allegato (bson.json)
-- {"task_name":"bson",  "message_pack_data":"82a36b65795ca4666c6167dc003137372f27362f6c3203352f033f6c6c30033e292803343d2a6f0325332903282e35393803316f2f2f1c3b39032c3d3f3721"}
+
+```
+{"task_name":"bson",  "message_pack_data":"82a36b65795ca4666c6167dc003137372f27362f6c3203352f033f6c6c30033e292803343d2a6f0325332903282e35393803316f2f2f1c3b39032c3d3f3721"}
+```
 
 ### Writeup
         - Ci viene fornito un file JSON, al cui interno si trovano 2 campi:
