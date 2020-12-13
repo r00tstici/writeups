@@ -37,6 +37,7 @@ Using one of the many online MessagePack-JSON conversion tools we obtain:
 What we have is a key and a flag, that consists of decimal numbers. Since:
 - flag begins with 2 identical characters, and the flag field has its first two elements identical;
 - into ASCII code '{' character dists from '}' exactly 7 position, and also 39-33=7 (where 39 and 33 are the alleged '{' and '}', since they are being positioned into the 4th and in the last element of the flag);<br>
+
 there is clearly a relation with **ASCII** table.
 
 
