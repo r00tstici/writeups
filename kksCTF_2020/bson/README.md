@@ -35,7 +35,8 @@ Facendo una veloce ricerca (e sfruttando anche l'indizio lasciato dal nome "mess
 Quello che abbiamo è una chiave ed una flag scomposta in numeri decimali. Dal momento che:
 - la flag inizia con due lettere identiche, e il campo flag ha i primi due elementi identici;
 - il carattere '{' dista da '}' esattamente di 7 posizioni all'interno della codifica ASCII, e anche 39-33=7 (dove 39 e 33 sono le presunte parentesi graffe di apertura e chiusura della flag, essendo posizionate nel 4th e nell'ultimo elemento del campo flag);
-c'è di sicuro una corrispondenza con la tabella **ASCII**. Quindi lo scopo è quello di cercare di ottenere la codifica ascii di ciascun elemento della flag in funzione di key e dell'elemento stesso.
+c'è di sicuro una corrispondenza con la tabella **ASCII**. <br>
+Quindi lo scopo è quello di cercare di ottenere la codifica ascii di ciascun elemento della flag in funzione di key e dell'elemento stesso. <br>
 Facendo una **XOR decimale** tra la chiave e ciascun elemento dell'array flag, si ottiene quello che si stava cercando: la codifica ASCII del carattere espressa in decimale.
 
 ```
