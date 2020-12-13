@@ -50,7 +50,7 @@ $ ls | grep ^m | wc -l | grep 1
 Success!
 $ ls | grep ^s | wc -l | grep 1
 Success!
-c
+```
 
 So there are 3 items into the directory, respectively beginning with ’f’, ‘m’ and ‘s’.
 Second, using this information, we’ve run the following script, in order to know their full names: 
@@ -97,7 +97,7 @@ while True:
 
 
 print("Here's your content: ", read)
-
+```
 
 The suspect was that inside maybehere directory there was something interesting; 
 so we’ve tried to change the current directory into ./maybehere, but we’ve noticed 
