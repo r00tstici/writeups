@@ -32,9 +32,9 @@ Facendo una veloce ricerca (e sfruttando anche l'indizio lasciato dal nome "mess
  }
  ```
         
-Quello che abbiamo è una chiave ed una flag scomposta in numeri decimali. Dal momento che:
-1 la flag inizia con due lettere identiche, e il campo flag ha i primi due elementi identici;
-2 il carattere '{' dista da '}' esattamente di 7 posizioni all'interno della codifica ASCII, e anche 39-33=7 (dove 39 e 33 sono le presunte parentesi graffe di apertura e chiusura della flag, essendo posizionate nel 4th e nell'ultimo elemento del campo flag);
+Quello che abbiamo è una chiave ed una flag scomposta in numeri decimali. Dal momento che:<br>
+- la flag inizia con due lettere identiche, e il campo flag ha i primi due elementi identici;
+- il carattere '{' dista da '}' esattamente di 7 posizioni all'interno della codifica ASCII, e anche 39-33=7 (dove 39 e 33 sono le presunte parentesi graffe di apertura e chiusura della flag, essendo posizionate nel 4th e nell'ultimo elemento del campo flag);
 c'è di sicuro una corrispondenza con la tabella **ASCII**.
 
 
