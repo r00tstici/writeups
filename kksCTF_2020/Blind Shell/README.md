@@ -97,7 +97,7 @@ while True:
 
 
 print("Here's your content: ", read)
-```
+
 
 The suspect was that inside maybehere directory there was something interesting; 
 so we’ve tried to change the current directory into ./maybehere, but we’ve noticed 
@@ -108,6 +108,7 @@ Again, thanks to the superpowers of ls, cat and grep, we’ve looked that into
 and we’ve finally discovered the flag
 
 Script:
+
 
 ```
 from pwn import *
@@ -136,7 +137,6 @@ while True:
 
 print("Here's your flag: ", flag)
 ```
-```
 
 ### Flag
-kks{Bl1nD_sH311_s2cKs_b4t_Y0U_ar3_amaz19g}
+```kks{Bl1nD_sH311_s2cKs_b4t_Y0U_ar3_amaz19g}```
