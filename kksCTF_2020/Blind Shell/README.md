@@ -54,7 +54,7 @@ Success!
 ```
 
 So there are 3 items into the directory, respectively beginning with ’f’, ‘m’ and ‘s’.<br>
-Second, using this information, we’ve run the following script, in order to know their full names: 
+Second, using this information, we’ve run the following commands, in order to know their full names: 
 
 ```
 $ ls | grep ^f | wc -l | grep 1
