@@ -1,7 +1,8 @@
 # Blind Shell
 
-Category: misc
-Points: 345
+- Category: misc
+- Points: 345
+- Solved by: 4cul, 01baf, crypt3d4ta
 
 ## Problem
 
