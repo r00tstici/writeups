@@ -17,9 +17,9 @@ Allegato (bson.json)
 ### Writeup
 
 Ci viene fornito un file JSON, al cui interno si trovano 2 campi:
-- task_name, contenente la stringa "bson";
-- message_pack_data, contenente una stringa esadecimale.
-        - Sicuramente la flag sarà racchiusa in qualche modo all'interno del secondo campo.
+**- task_name**, contenente la stringa "bson";
+**- message_pack_data**, contenente una stringa esadecimale.
+- Sicuramente la flag sarà racchiusa in qualche modo all'interno del secondo campo.
         - Facendo una veloce ricerca (e sfruttando anche l'indizio lasciato dal nome "message pack data"), si evince che il campo message_pack_data racchiude al suo interno un messaggio formattato in MessagePack - un efficiente formato di serializzazione binaria. Utilizzando uno dei tanti tool di conversione onlne MessagePack-JSON, si riesce ad ottenere:
 ```{"key" = 92,
  "flag" = [55,55,47,39,54,47,108,50,3,53,47,3,63,108,108,48,3,62,41,40,
