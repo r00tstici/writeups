@@ -98,6 +98,11 @@ while True:
 
 print("Here's your content: ", read)
 ```
+After launching the script we obtain:
+
+```
+Look_around,maybe_here
+```
 
 The suspect was that inside maybehere directory there was something interesting; 
 so we’ve tried to change the current directory into ./maybehere, but we’ve noticed 
