@@ -38,7 +38,7 @@ $ ls | wc -l | grep 3
 Success!
 ```
 
-And to see the name of each file:
+And to see the name of each file:<br>
 First we’ve looked with what letter each filename begins:
 
 ```
