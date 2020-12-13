@@ -11,4 +11,4 @@ Sometimes stupid hackers leave behind signatures that can be used to find them -
 
 ## Writeup
 
-By concatenating in the right order the bytes we previously removed from the files to rebuild them in the challenge Encrypted Storage 1 and converting them to ascii we have our flag: `kks {1_w4s_h3r3!}`
+By concatenating in the right order the bytes we previously removed from the files to rebuild them in the challenge Encrypted Storage 1 and converting them to ascii we have our flag: `kks{1_w4s_h3r3!}`
