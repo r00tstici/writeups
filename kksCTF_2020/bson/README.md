@@ -8,7 +8,7 @@ Info:
 ## Problem
 
 This is the last time i'm asking, who the f is bson??
-Allegato (bson.json)
+Attached (bson.json)
 
 ```
 {"task_name":"bson",  "message_pack_data":"82a36b65795ca4666c6167dc003137372f27362f6c3203352f033f6c6c30033e292803343d2a6f0325332903282e35393803316f2f2f1c3b39032c3d3f3721"}
@@ -16,12 +16,14 @@ Allegato (bson.json)
 
 ### Writeup
 
-Ci viene fornito un file JSON, al cui interno si trovano 2 campi:
-- task_name, contenente la stringa "bson";
-- message_pack_data, contenente una stringa esadecimale.
+We are provided with a JSON file, inside which there are 2 fields:
+- task_name, containing "bson" string;
+- message_pack_data, containing a hexadecimal string.
 
-Sicuramente la flag sarà racchiusa in qualche modo all'interno del secondo campo.
-Facendo una veloce ricerca (e sfruttando anche l'indizio lasciato dal nome "message pack data"), si evince che il campo message_pack_data racchiude al suo interno un messaggio formattato in MessagePack - un efficiente formato di serializzazione binaria. Utilizzando uno dei tanti tool di conversione onlne MessagePack-JSON, si riesce ad ottenere:
+
+With high odds, the flag is stored inside the message_pack_data field.
+By doing a rapid research (and by exploiting the hint left by the "message_pack_data" name) it's clear that the field message_pack_data holds into a message formatted in MessagePack - an efficient binary serialization format. 
+Using one of the many online MessagePack-JSON conversion tools we obtain:
 
 ```
 {
@@ -32,14 +34,14 @@ Facendo una veloce ricerca (e sfruttando anche l'indizio lasciato dal nome "mess
  }
  ```
         
-Quello che abbiamo è una chiave ed una flag scomposta in numeri decimali. Dal momento che:<br>
-- la flag inizia con due lettere identiche, e il campo flag ha i primi due elementi identici;
-- il carattere '{' dista da '}' esattamente di 7 posizioni all'interno della codifica ASCII, e anche 39-33=7 (dove 39 e 33 sono le presunte parentesi graffe di apertura e chiusura della flag, essendo posizionate nel 4th e nell'ultimo elemento del campo flag);
-c'è di sicuro una corrispondenza con la tabella **ASCII**.
+What we have is a key and a flag, that consists of decimal numbers. Since:
+- flag begins with 2 identical characters, and the flag field has its first two elements identical;
+- into ASCII code '{' character dists from '}' exactly 7 position, and also 39-33=7 (where 39 and 33 are the alleged '{' and '}', since they are being positioned into the 4th and in the last element of the flag);
+There is clearly a relation with **ASCII** table.
 
 
-Quindi lo scopo è quello di cercare di ottenere la codifica ascii di ciascun elemento della flag in funzione di key e dell'elemento stesso. <br>
-Facendo una **XOR decimale** tra la chiave e ciascun elemento dell'array flag, si ottiene quello che si stava cercando: la codifica ASCII del carattere espressa in decimale.
+So the aim is to obtain the ASCII of each element of the flag in function of key and the same element. <br>
+Doing a **XOR decimale** between the key and each flag's array element, we obtain what we've looking for: the ASCII encoding of the character expressed in decimal.
 
 ```
 #!/bin/env/python3
