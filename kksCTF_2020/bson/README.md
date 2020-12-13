@@ -37,7 +37,9 @@ Quello che abbiamo è una chiave ed una flag scomposta in numeri decimali. Dal m
 - il carattere '{' dista da '}' esattamente di 7 posizioni all'interno della codifica ASCII, e anche 39-33=7 (dove 39 e 33 sono le presunte parentesi graffe di apertura e chiusura della flag, essendo posizionate nel 4th e nell'ultimo elemento del campo flag);
 c'è di sicuro una corrispondenza con la tabella **ASCII**. Quindi lo scopo è quello di cercare di ottenere la codifica ascii di ciascun elemento della flag in funzione di key e dell'elemento stesso.
 Facendo una **XOR decimale** tra la chiave e ciascun elemento dell'array flag, si ottiene quello che si stava cercando: la codifica ASCII del carattere espressa in decimale.
-```#!/bin/env/python3
+
+```
+#!/bin/env/python3
 
 key = 92
 flag = [55,55,47,39,54,47,108,50,3,53,47,3,63,108,108,48,3,62,41,40,
@@ -49,6 +51,7 @@ for item in flag:
     xor_result = key^item
     ascii_flag.append(chr(xor_result))
 
-for item in ascii_flag: print(item, end="")```
-        - 
-    - flag: kks{js0n_is_c00l_but_hav3_you_tried_m3ss@ge_pack}
+for item in ascii_flag: print(item, end="")
+```
+      
+flag: kks{js0n_is_c00l_but_hav3_you_tried_m3ss@ge_pack}
