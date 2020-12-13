@@ -1,9 +1,9 @@
 # bson
 
-Info
-Category: misc
-Points: 331
-Solved by: 4cul, 01baf, crypt3d4ta
+Info:
+- Category: misc
+- Points: 331
+- Solved by: 4cul, 01baf, crypt3d4ta
 
 ## Problem
 
