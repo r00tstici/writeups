@@ -24,7 +24,7 @@ Dans la composition de cette fonction, j'ai été aidé par un écrivain avec le
 
 ### Writeup
 
-The challenge consists to forecast a mathematical function result by having in example 3 of its application.
+The challenge consists of forecasting a mathematical function result by having in example 3 of its application.
 The idea is to find some pattern knowing that:
 - Between the number of digits in input and those in output there isn't any evident regularity;
 - Digits that appears in input, also appears in output.
