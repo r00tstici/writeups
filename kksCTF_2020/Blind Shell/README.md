@@ -68,9 +68,9 @@ $ ls | grep ^flag\.txt | wc -l | grep 1
 Success!
 ```
 
-The obtained files were:
-    -flag.txt: 	text file
-    -server.py: 	python script
+The obtained files were:<br>
+    -flag.txt: 	text file<br>
+    -server.py: 	python script<br>
     -maybehere: 	directory
 
 The same procedure is used to read from flag.txt:
