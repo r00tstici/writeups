@@ -70,9 +70,9 @@ Success!
 ```
 
 The obtained files were:<br>
-    -flag.txt: 	text file<br>
-    -server.py: 	python script<br>
-    -maybehere: 	directory
+    - flag.txt: 	text file<br>
+    - server.py: 	python script<br>
+    - maybehere: 	directory
 
 The same procedure is used to read from flag.txt:
 
