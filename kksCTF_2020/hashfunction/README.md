@@ -14,7 +14,7 @@ http://tasks.kksctf.ru:30020/
 
 ## Writeup
 
-Inspecting the code and doing some tests we can see that each 8-characters-long digest's block is related only to one 4-characters-long block of the provided password.
+Inspecting the code and doing some tests we can see that each 8-characters-long digest block is related only to one 4-characters-long block of the provided password.
 For example
 
 | Password | Hash                                        |
@@ -22,11 +22,15 @@ For example
 | 1234     | **553b6a59** 52d04dc2 0036dbd8 313ed055     |
 | 12341234 | **553b6a59** **553b6a59** 3f1cf75d 7068baae |
 
-So, the idea is to brute force, on our local machine, only the first 8 characters of the whole password.
+So, the idea is:
+1) Find all possible combinations of 4 characters using only the printable ones.
+2) Compare each 8-characters digest block with each provided hash block.
+3) Compose the password.
+
 
 [brute_force.go](brute_force.go)
 
-After few seconds, we obtain the following results.
+After few seconds, we obtain the following results
 
 ![](brute.go.png)
         
