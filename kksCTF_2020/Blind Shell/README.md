@@ -57,15 +57,15 @@ So there are 3 items into the directory, respectively beginning with ’f’, �
 Second, using this information, we’ve run the following commands, in order to know their full names: 
 
 ```
-$ ls | grep ^f | wc -l | grep 1
+$ ls | grep ^f
 Success!
-$ ls | grep ^fl | wc -l | grep 1
+$ ls | grep ^fl
 Success!
-$ ls | grep ^fla | wc -l | grep 1
+$ ls | grep ^fla
 Success!
-$ ls | grep ^flag\.t | wc -l | grep 1
+$ ls | grep ^flag\.t
 Success!
-$ ls | grep ^flag\.txt | wc -l | grep 1
+$ ls | grep ^flag\.txt
 Success!
 ```
 
