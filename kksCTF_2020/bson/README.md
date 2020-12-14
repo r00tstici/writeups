@@ -34,12 +34,7 @@ Using one of the many online MessagePack-JSON conversion tools we obtain:
  }
  ```
         
-What we have is a key and a flag, that consists of decimal numbers. Since:
-- flag begins with 2 identical characters, and the flag field has its first two elements identical;
-- into ASCII code '{' character dists from '}' exactly 7 position, and also 39-33=7 (where 39 and 33 are the alleged '{' and '}', since they are being positioned into the 4th and in the last element of the flag);<br>
-
-there is clearly a relation with **ASCII** table.
-
+What we have is a key and a flag, that consists of decimal numbers. We notice that in a flag's array elements begins with 2 identical number then we can imagine an association between the characters of the **ASCII** code and the flag.
 
 So the aim is to obtain the ASCII of each element of the flag in function of key and the same element. <br>
 Doing a **XOR decimale** between the key and each flag's array element, we obtain what we've looking for: the ASCII encoding of the character expressed in decimal.
