@@ -24,4 +24,5 @@ By removing them (and saving them for later) we get the original files.
 In particular, one of the files is a zip in which there is a flag.txt file, but to extract it you need a password.
 After looking in vain for password clues within the other files, I tried bruteforce and it worked:
 ![rockyou](./rockyou.png)
+
 Finally we find the flag contained in flag.txt: `kks{n0t_s3cur3}`
