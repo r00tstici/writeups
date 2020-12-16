@@ -18,7 +18,7 @@ If we open the [file](./file.gcode) that is given to us with any text editor we 
 
 ![gcode](./gcode.png)
 
-Since the GCODE is used to encode the actions that are sent to a the 3D printer, let's try to open the file with a slicing program for 3D printers (Ultimaker Cura will be used in the following examples):
+Since the GCODE is used to encode the actions that are sent to a 3D printer, let's try to open the file with a slicing program for 3D printers (Ultimaker Cura will be used in the following examples):
  
 ![cura1](./cura1.png)
 
