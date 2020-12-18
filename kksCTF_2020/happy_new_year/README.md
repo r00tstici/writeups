@@ -194,7 +194,7 @@ $ cat /gifts/gift_for_you/flag.txt
 :,5[m9mTre9mT)]9iP/19mT6S9iOi5:2NES>&%1s9mT)\=aF+c:23dT9giK;:01SE:3pDr:3p&h:K1A39mU;q:/kD59mT5a=__(p:3pP/:I.-,$
 ```
 
-I got stuck here for a while since `kusky` started working with me on this challenge. Using cyberchef he decrypted it with the following recipe:
+I got stuck here for a while until `kusky` started working with me on this challenge. Using cyberchef he decrypted it with the following recipe:
 
 ![third flag](images/third_flag.png)
 
