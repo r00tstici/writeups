@@ -28,9 +28,9 @@ By surfing in the GUI we found a panel with some credentials: a username `Engine
 
 ![Panel](images/panel.png)
 
-But... if the software knows which is the password, it stored that somewhere in the memory.
+But... if the software knows which is the password, it stores that somewhere in the memory.
 
-As suggested by one of our members (drw0if) we downloaded `windbg` to do the debug of the software and see what happens when we append characters to the password. There was just a problem: none of us knew how to use it and we ended up giving up because we couldn't read the memory. We opted for an easier (and funnier) way to read the memory: `Cheat Engine`, the software that every middle school student used at least one time to try to hack `Metin 2`.
+As suggested by one of our members (drw0if) we downloaded `windbg` to do the debug of the software and see what happens when we append characters to the password. There was just a problem: none of us knew how to use it and we ended up giving up because we couldn't read the memory. We opted for an easier (and funnier) way to read the memory: RxThorn suggested `Cheat Engine`, the software that every middle school student used at least one time to try to hack `Metin 2`.
 
 From there it was all easy: we connected Cheat Engine to the process of SPC Connect Pro with the panel with the password opened and started a search for a string containing `hxp`. Some results, hooray! No.
 
