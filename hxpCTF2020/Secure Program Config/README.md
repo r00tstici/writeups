@@ -36,6 +36,6 @@ From there it was all easy: we connected Cheat Engine to the process of SPC Conn
 
 ![Cheat Engine](images/cheat.png)
 
-Cheat engine didn't show us the complete string but only a part of the beginning, we could have increased the string length on the Cheat Engine result but we found out later. We decided to change strategy and use the `Memory View` instrument and searched for some text containing `hxp{` and there we found the flag: `hxp{4t_least_it_was_n0t_pla1ntext}`
+Cheat Engine didn't show us the complete string but only a part of the beginning, we could have increased the string length on Cheat Engine result but we found out later. We decided to change strategy and use the `Memory View` instrument and searched for some text containing `hxp{` and there we found the flag: `hxp{4t_least_it_was_n0t_pla1ntext}`
 
 ![Memory View](images/memory.png)
