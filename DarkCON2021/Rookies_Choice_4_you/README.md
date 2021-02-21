@@ -1,13 +1,9 @@
 # Rookie's_Choice_4_you - DarkCON 2021
 
----
-
-Category: Crypto
-Points: 467
-Solves: 51
-Solved by: RxThorn
-
----
+- Category: Crypto
+- Points: 467
+- Solves: 51
+- Solved by: RxThorn
 
 ## Solution
 

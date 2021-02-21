@@ -1,18 +1,14 @@
 # Pixelify - DarkCON 2021
 
----
+- Category: Misc
+- Points: 474
+- Solves: 42
+- Solved by: RxThorn
 
-Category: Misc
-Points: 474
-Solves: 42
-Solved by: RxThorn
+## Description
 
----
-
-```
-Pixels don't reveal secrets, or do they?
+Pixels don't reveal secrets, or do they?  
 Hint : The original file name is inject.bin
-```
 
 ## Solution
 

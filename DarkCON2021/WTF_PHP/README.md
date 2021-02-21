@@ -1,19 +1,15 @@
 # WTF PHP - DarkCON 2021
 
----
+- Category: Web
+- Points: 269
+- Solves: 254
+- Solved by: RxThorn
 
-Category: Web
-Points: 269
-Solves: 254
-Solved by: RxThorn
+## Description
 
----
-
-```
-Your php function didnt work? maybe some info will help you xD
-PS: Flag is somewhere in /etc
+Your php function didnt work? maybe some info will help you xD  
+PS: Flag is somewhere in /etc  
 Note: This chall does not require any brute forcing
-```
 
 ![Home](./pictures/home.png)
 
