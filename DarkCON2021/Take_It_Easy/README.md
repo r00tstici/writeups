@@ -1,13 +1,9 @@
 # Take It Easy - DarkCON 2021
 
----
-
-Category: Crypto
-Points: 428
-Solves: 99
-Solved by: RxThorn
-
----
+- Category: Crypto
+- Points: 428
+- Solves: 99
+- Solved by: RxThorn
 
 ## Solution
 

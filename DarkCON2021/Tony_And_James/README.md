@@ -1,13 +1,9 @@
 # Tony And James - DarkCON 2021
 
----
-
-Category: Crypto
-Points: 472
-Solves: 45
-Solved by: RxThorn
-
----
+- Category: Crypto
+- Points: 472
+- Solves: 45
+- Solved by: RxThorn
 
 ## Solution
 
