@@ -149,7 +149,7 @@ The RAX (Accumulator register) will hold the system call number where we will ca
 The RDI (Destination Index register) argument will point to /bin/sh.
 The RSI and RDX (Source Index register and Data register) are additional arguments that we will zero out.
 
-Since PIE (Position Independent Executable) isn't enabled we know that the .data address won't change from run to run. So, this is a great place to store /bin/sh in memory. Let's check our section permissions and check our .bss section address (located adjacent to the data segment).
+Since PIE (Position Independent Executable) isn't enabled we know that the .data address won't change from run to run. So, this is a great place to store /bin/sh in memory. Let's check our section permissions and check our .data section address.
 We use readelf to copy the address where the .data section starts.
 
 `kali@kali:~/# readelf -t easy-rop`
