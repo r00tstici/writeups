@@ -18,7 +18,7 @@ In order to solve this challenge it's necessary to have solved the prevoius one 
 
 `http://challs.dvc.tf:1337/members`
 
-Let's have a look to the web site. We have a page where there is a table with some information about members on the right and a form that allows to search members on the left. By analysing the source code of the page we can see that the form uses the GET method to send search-parameters, so all the text we write will be encoded into the url. Once the server has recived our data, it will return information about mebers. So it seems there's a MySQL Database back the application. Let's inject some malicious code into the text field:
+Let's have a look to the web site. We have a page where there is a table with some information about members on the right and a form that allows to search members on the left. By analysing the source code of the page we can see that the form uses the GET method to send search-parameters, so all the text we write will be encoded into the url. Once the server has recived our data, it will return information about members. So it seems there's a MySQL Database back the application. Let's inject some malicious code into the text field:
 
 `Leonard" OR 1=1; --`
 
@@ -28,7 +28,7 @@ and the application will return all the records of the table, so the application
 
 ## Solution
 
-Probably the flag isn't in the same table where are archived all the members. So the best thing to do is to show all the table names and see if there is something interesting. To do this we can use the **UNION** command that permits to add a maliciuos sub-query to the original one and get other data from the database. In particolaur the table **information_schema.tables** contains the information about all the tables located in the db. Let's inject the following code:
+Probably the flag isn't in the same table where are archived all the members. So the best thing to do is to show all the table names and see if there is something interesting. To do this we can use the **UNION** command that permits to add a malicious sub-query to the original one and get other data from the database. In particolaur the table **information_schema.tables** contains the information about all the tables located in the db. Let's inject the following code:
 
 `Leonard" UNION (SELECT TABLE_NAME,2,3 FROM INFORMATION_SCHEMA.TABLES); --`
 
@@ -40,7 +40,7 @@ the application will return two records with the name of the fields: **id** and 
 
 `Leonard" UNION (SELECT flag,2,3 FROM supa_secret_table); --`
 
-and the appliction will print the flag!
+and the application will print the flag!
 
 
 ## Flag
