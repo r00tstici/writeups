@@ -18,7 +18,7 @@ In order to solve this challenge it's necessary to have solved the prevoius one 
 
 `http://challs.dvc.tf:1337/members`
 
-Let's have a look to the web site. We have a page where there is a table with some information about members on the right and a form that allows to search members on the left. By analysing the source code of the page we can see that the form uses the GET method to send search-parameters, so all the text we write will be encoded into the url. Once the server has recived our data, it will return information about mebers. So it seems there's a MySQL Database back the application. Let's inject some malicious code into the text field:
+Let's have a look to the web site. We have a page where there is a table with some information about members on the right and a form that allows to search members on the left. By analysing the source code of the page we can see that the form uses the GET method to send search-parameters, so all the text we write will be encoded into the url. Once the server has recived our data, it will return information about members. So it seems there's a MySQL Database back the application. Let's inject some malicious code into the text field:
 
 `Leonard" OR 1=1; --`
 
