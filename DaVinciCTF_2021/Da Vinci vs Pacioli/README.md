@@ -17,7 +17,7 @@ Flag format: dvCTF{password}
 
 In this challenge we are given a zip file called 'important_files'.
 Once the content has been extracted, we are faced with another zip and a file with the .pgn (Portable Game Notation) extension, a format used to record chess games.
-The 'chest.zip' file is password protected. First we look in the 'amazing_game.pgn' file and try to get some more information.
+The 'chest.zip' file is password protected. First we look in the 'amazing_game.pgn' file and try to get some information.
 
 ```
 [Event "Playing chess between drawings"]
