@@ -75,4 +75,4 @@ We put in the flag format, sent it and BOOM!, we got the points.
 
 # Flag
 
-'dvCVTF{MQNFZ0VPGDsfeQCvudeX}' 
+' dvCVTF{MQNFZ0VPGDsfeQCvudeX} ' 
