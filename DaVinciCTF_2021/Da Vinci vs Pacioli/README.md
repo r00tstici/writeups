@@ -66,7 +66,9 @@ and so on.
 ```
 
 To better analyze the content we redirect the output to a file with `strings nothing_to_see_here > out.txt`
+
 Let's try to find out if there is something different from the usual pattern.
+
 By running `sort -u out.txt > out2.txt` followed by `cat out2.txt` we obtain:
 
 ```
