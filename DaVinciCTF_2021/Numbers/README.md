@@ -21,7 +21,8 @@ When we try to guess the number, the server throws out:
 We assumed that the number are generated with python random module based on Mersenne Twister, a pseudo random generator.
 To solved this challenge we wrote this script that at the end it worked perfectly.
 
-`from pwn import *
+```
+from pwn import *
 from mt19937predictor import MT19937Predictor
 
 conn = remote('challs.dvc.tf',3096)
@@ -48,6 +49,7 @@ guess = predictor.getrandbits(32)
 print(type(guess))
 print(guess)
 conn.sendline(str(guess))
-print(conn.recvline())`
+print(conn.recvline())
+```
 
 `flag: dvCTF{tw1st3d_numb3rs}`
