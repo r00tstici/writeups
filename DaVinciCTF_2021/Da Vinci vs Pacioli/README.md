@@ -47,7 +47,7 @@ At this point we can extract the contents of the chest.zip file. We get two file
 
 To access the encrypted database we need a master password.
 
-Even though the file is called "nothing to see here" we still tried to take a look. Also because the file has a large size.
+Even though the file is called "nothing to see here" we still tried to take a look. Also because the file has a large size (1,3 GB).
 The output of the command `strings nothing_to_see_here` appears to return a repeating pattern.
 
 ```
