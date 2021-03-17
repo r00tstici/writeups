@@ -77,6 +77,7 @@ By running `sort -u out.txt > out2.txt` followed by `cat out2.txt` we obtain:
 ```
 
 As we suspected!
+
 By converting the hexadecimal string we get the database master password: `sup4_dup4_p4ssw0rd_4m4z1ng_n01_w1ll_susp3ct`
 
 Now we can access the database. Inside we found various accounts with their passwords. From the description of the challenge we know that a password must be entered between the flag format.
