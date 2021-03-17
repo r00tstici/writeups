@@ -14,7 +14,7 @@ Can you get more information about the members?
 
 ## Analysis
 
-In order to solve this challenge it's necessary to have solved the prevoius one called "Authentication" that permits to access the following web service:
+In order to solve this challenge it's necessary to have solved the previous one called "Authentication" that permits to access the following web service:
 
 `http://challs.dvc.tf:1337/members`
 
@@ -28,11 +28,11 @@ and the application will return all the records of the table, so the application
 
 ## Solution
 
-Probably the flag isn't in the same table where are archived all the members. So the best thing to do is to show all the table names and see if there is something interesting. To do this we can use the **UNION** command that permits to add a malicious sub-query to the original one and get other data from the database. In particolaur the table **information_schema.tables** contains the information about all the tables located in the db. Let's inject the following code:
+Probably the flag isn't in the same table where are archived all the members. So the best thing to do is to show all the table names and see if there is something interesting. To do this we can use the **UNION** command that permits to add a malicious sub-query to the original one and get other data from the database. In particular the table **information_schema.tables** contains the information about all the tables located in the db. Let's inject the following code:
 
 `Leonard" UNION (SELECT TABLE_NAME,2,3 FROM INFORMATION_SCHEMA.TABLES); --`
 
-and the application will return all the table names that are stored in the database. If we scroll down we can see two interesting tables: **members** that is the table that contains all the members information and another table called **supa_secret_table**, let's analyse it. The table called **information_schema.columns** contains all the information about the columns of all the tables stored. So we can get the fields name of **supa_secret_table** by injecting this code:
+and the application will return all the table names that are stored in the database. If we scroll down we can see two interesting tables: **members** that is the table that contains all the members information and another table called **supa_secret_table**, let's analyse it. The table called **information_schema.columns** contains all the information about the columns of all the tables stored. So we can get the field names of **supa_secret_table** by injecting this code:
 
 `Leonard" UNION (SELECT COLUMN_NAME,2,3 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='supa_secret_table'); --`
 
