@@ -40,6 +40,7 @@ The 'chest.zip' file is password protected. First we look in the 'amazing_game.p
 ```
 
 We know that is possible to encode and decode data in a chess game via chess steganography.
+
 Using the following site: `https://incoherency.co.uk/chess-steg` we can decode the moves of the game and get the string `3nfW@XuAT4LS4B5HmWBD&qMM5@RqVMgs` which turns out to be the zip archive password.
 
 At this point we can extract the contents of the chest.zip file. We get two files: `keys.kdbx` and `nothing_to_see_here`.
