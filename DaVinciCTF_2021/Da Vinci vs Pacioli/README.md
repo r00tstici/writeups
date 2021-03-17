@@ -86,7 +86,7 @@ From the description of the challenge we know that a password must be entered be
 
 After few attemps we find the right one that corresponds to `MQNFZ0VPGDsfeQCvudeX`.
 
-We put in the flag format, sent it and BOOM!, we got the points.
+We put in the flag format, sent it and BOOM, we got the points.
 
 # Flag
 `dvCVTF{MQNFZ0VPGDsfeQCvudeX}`
