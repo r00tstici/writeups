@@ -15,7 +15,7 @@
 ## Analysis
 
 The challenge accepts a hex string and prints a custom hash. The most important thing we have to note is that it prints two different answers: `E(input || flag)` and `!E(input || flag)`. We decided to ignore `!E(input || flag)` answer and to understand what `E(input || flag)` means.
-So we started to insert a lot of string of different length and to take note of every result.
+So we started inserting a lot of strings of different lengths and taking note of each result.
 
 |   Input  |                                                                        E(input \|\| flag)                                                                        | Length |
 |:--------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------:|--------|
@@ -33,7 +33,7 @@ So we started to insert a lot of string of different length and to take note of 
 | '0' * 82 | 001f11041f67ed07b61b191f99749816001f11041f67ed07b61b191f99749816b9d0828cdfd56526f1c5db5800cee3ea18f77807d91f685f7c9ec14b59a479d9155075db7f6ceeafd3d4db2a44eae980 | 160    |
 
 
-We can see that hash length is a multiple of 32 characters.
+We can see that the hash length is a multiple of 32 characters.
 
 | Input length | Hash Length |
 |:------------:|------------------|
@@ -44,7 +44,7 @@ We can see that hash length is a multiple of 32 characters.
 | 80           | 128              |
 | 82           | 160              |
 
-Comparing `'0' * 32`, `'0' * 50` and `'0' * 64` hashes we can see that the first 32 characters are the same.
+Comparing `'0' * 32`, `'0' * 50` and `'0' * 64` hashes, we can see that the first 32 characters are the same.
 
 **001f11041f67ed07b61b191f99749816**7caafa90873c58d4640dd8b9894c929ac908eab8b015d40fc92d62674716fc09
 
@@ -52,7 +52,7 @@ Comparing `'0' * 32`, `'0' * 50` and `'0' * 64` hashes we can see that the first
 
 **001f11041f67ed07b61b191f99749816**001f11041f67ed07b61b191f997498167caafa90873c58d4640dd8b9894c929ac908eab8b015d40fc92d62674716fc09
 
-Comparing `empty input`, `'0' * 32`, `'0' * 64` and `'f'*64` hashes we can also see that the last 32 characters are the same.
+Comparing `empty input`, `'0' * 32`, `'0' * 64` and `'f'*64` hashes, we can also see that the last 32 characters are the same.
 
 **7caafa90873c58d4640dd8b9894c929ac908eab8b015d40fc92d62674716fc09**
 
@@ -70,7 +70,7 @@ So we understood that `E(input || flag)` means
 2) Add padding if `len(input) < 32`
 3) Encrypt
 
-This is an `Oracle padding`.
+It seems an `Oracle padding`.
 
 ## Solution
 
@@ -80,13 +80,13 @@ The idea is to brute force each character of the flag:
 1) Send `'0' * (BLOCK_SIZE - 2)` and take note of the hash ( `encrypted_flag` )
 2) For each printable character c, send `hex(c)` padded with `BLOCK_SIZE - 2` zeros and store the hash ( `encrypted_char` )
 3) If `encrypted_flag == encrypted_char` we found the first character
-4) Reduce padding of 2 characters and append `encrypted_flag`
-5) Repeat until you complete first block
+4) Reduce padding of 2 characters and append the `encrypted_flag`
+5) Repeat until you complete the first block
 
-We have the first part of the flag `'dvCTF{3CB_4ngry_'`.
-Now we have to change `BLOCK_SIZE` to 64 characters and repeat all using the first part of hashed flag.
+We have the first part of the flag `dvCTF{3CB_4ngry_`.
+Now we have to change `BLOCK_SIZE` to 64 characters and repeat all using the first part of the hashed flag.
 
-To be sure that the idea was good, we first compared `'0' * 30` hash with `'0' * 30 + 'd'` hash as we knew that the flag should have started with `d`
+To be sure that the idea was good, we first compared `'0' * 30` hash with `'0' * 30 + 'd'` hash since we knew that the flag should have started with `d`.
 
 
 ## Flag
