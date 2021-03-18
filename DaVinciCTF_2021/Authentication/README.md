@@ -13,13 +13,13 @@ Can you find a way to authenticate as admin?
 
 ## Analysis
 
-The name of the challenge tells us that we need a way to authenticate as admin, so as we don't know the password we have to bypass the in some way authentication, the most common attack that we can try on this login page is a SQL Injection.
+The name of the challenge tells us that we need a way to authenticate as admin, so as we don't know the password, we have to bypass the in some way authentication.
 
 ## Solution
 
 The most common attack that we can try on this login page to bypass authentication is SQL Injection.
 We try to login with the username `admin` and the password `' or 1 -- -` and we succeed we successfully bypassed authentication with a SQL Injection.
-Now lets find the flag, let's inspect the code of the page where we have been redirected and indeed we find the flag.
+Now let’s find the flag, let's inspect the code of the page where we have been redirected and indeed, we find the flag.
 
 ## Flag
 
