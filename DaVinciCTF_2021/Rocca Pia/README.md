@@ -66,11 +66,11 @@ void transform(long param_1)
 }
 ```
 
-This function takes the string that we passed as an argument when we called the binary and perform an xor operation with each character of the string, it use a counter variable `local_24` that is set initally to 0 and gets incremented each iteration of the while loop, it's used as an index of the string that is transformed, if the current value of this counter is even the character at the specific index of the string `(input[local_24])` gets xored with 0x13 otherwise it gets xored with 0x37, the loop ends when the counter is equal to the length of a string that is later compared with the transformed string that is modified in the while loop.
+This function takes the string that we passed as an argument when we called the binary and perform an xor operation with each character of the string, it use a counter variable `local_24` that is set initially to 0 and gets incremented each iteration of the while loop, it's used as an index of the string that is transformed, if the current value of this counter is even the character at the specific index of the string `(input[local_24])` gets xored with 0x13 otherwise it gets xored with 0x37, the loop ends when the counter is equal to the length of a string that is later compared with the transformed string that is modified in the while loop.
 
 ## Solution
 
-At this point we now that we can reverse the XOR operation (z = x XOR y then x = z XOR y), but first we need to get the hex values of the string that is used for the last comparison. 
+At this point we now that we can reverse the XOR operation (z = x XOR y then x = z XOR y), but first we need to get the hex values of the string that is used for the last comparison.
 
 ```
                              PASSWD   XREF[3]:     Entry Point(*),                                                             transform:00101221(*), 
@@ -109,6 +109,20 @@ At this point we now that we can reverse the XOR operation (z = x XOR y then x =
 ```
 
 Then we wrote the script that performs the xor operations we found in the transform function on this string, and we got the flag.
+
+```
+#!/usr/bin/python3
+flag_xored = [0x77, 0x41, 0x50, 0x63, 0x55, 0x4c, 0x5a, 0x68, 0x7f, 0x06, 0x78, 0x04, 0x4c, 0x44, 0x64, 0x06, 0x7e, 0x5a, 0x22, 0x59, 0x74, 0x4a, 0x4e, 0x69, 0x63, 0x65, 0x20, 0x66, 0x6c, 0x61, 0x67]
+flag = []
+
+for i in range(len(flag_xored)):
+    if(i % 2  == 0):
+        flag.append(chr(flag_xored[i] ^ 0x13))
+    else:
+        flag.append(chr(flag_xored[i] ^ 0x37))
+
+print("".join(flag))
+```
 
 ## Flag
 
