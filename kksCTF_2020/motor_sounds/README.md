@@ -14,7 +14,7 @@ Zhzhzhzhzhzhzhzhzhzh, viiiiv, viiiiv, zzhzhzhzhzhzhzh ...
 
 ## Writeup
 
-If we open the [file](./file.gcode) that is given to us with any text editor we notice that inside it there are some writings that can be identified as GCODE, the following is an extract:
+If we open the [file](https://drive.google.com/file/d/1gzn3XE3FKk-1pMXR9QPUPm1OpxSgw-mK/view?usp=sharing) that is given to us with any text editor we notice that inside it there are some writings that can be identified as GCODE, the following is an extract:
 
 ![gcode](./gcode.png)
 
