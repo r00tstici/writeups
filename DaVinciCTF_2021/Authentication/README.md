@@ -1,4 +1,4 @@
-# Read - DaVinciCTF
+# Authentication - DaVinciCTF
 
 - Category: Web
 - Points: 10
