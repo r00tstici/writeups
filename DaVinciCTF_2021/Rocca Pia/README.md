@@ -1,4 +1,4 @@
-# Read - DaVinciCTF
+# Rocca Pia - DaVinciCTF
 
 - Category: Reverse
 - Points: 50
