@@ -14,8 +14,8 @@ Keytime: Asia/Japan
 ## Analysis
 
 We have three services:
-- `public`: flask web application (HTTP://35.200.63.50/)
-- `private`: node.js web application (HTTP://private:5000/)
+- `public`: flask web application (http://35.200.63.50/)
+- `private`: node.js web application (http://private:5000/)
 - nginx proxy server
 
 Only public service is accessible to us.
@@ -68,7 +68,7 @@ def IntegrityCheck(self,key, dbHash):
 def rollback():
 ```
 
-Now, we need a way to call it from public service.
+Now, we need a way to call it from the public service.
 
 Only `public/src/routes/apis.js` seems interesting. It has three public endpoints, each of which, in turn, calls a private endpoint.
 
@@ -105,13 +105,13 @@ def LanguageNomarize(request):
 ### 2. ACCESS TO `/rollback`
 
 `re.sub(r'%00|%0d|%0a|[!@#$^]|\.\./', '', language)` doesn't allow us to do path traversal.
-Regex `^[!@#$\\/.].*/.*`, instead, permit every type of "standard" HTTP request. So we can call whatever endpoint we want, even using query parameters.
+Regex `^[!@#$\\/.].*/.*`, instead, permits every type of "standard" HTTP request. So we can call whatever endpoint we want, even using query parameters.
 
 We send an HTTP request to `apis/coin` with the headers:
 - `Host: private:500`
 - `Lang: rollback`
 
-So we have `request.host_url = HTTP://private:500/` and `language = rollback`.
+So we have `request.host_url = http://private:500/` and `language = rollback`.
 
 Before making the request, we must remove all the unnecessary headers to comply with the constraint given by the `before_request` function
 
@@ -188,7 +188,7 @@ As we can see, the sign consists of sha512 of the `query_string` parameters. In 
 
 It's time to use `docker-compose up --build`. Before doing this, we have to add some logging to obtain the Sign. Also, we have to modify `private/app/coinapi.py` so it returns fake data.
 
-So, let's launch the containers, send the HTTP request to localhost using a random Sign and get the logged Sign.
+So, let's launch the containers, send the HTTP request to localhost using a random Sign and get what will be logged.
 
 Now we can resend the request to the real server with the updated Sign...<br>
 ... and receive `{'message': 'Key error'}`.
@@ -225,7 +225,7 @@ def UpdateKey(self):
 
 **We have a problem!** We need the md5 of the remote db (`dbHash`).
 
-Fortunately, there is `/integrityStatus` which gives us it.
+Fortunately, there is `/integrityStatus` which provides it.
 
 ![dbHash](pictures/dbHash.jpg)
 
@@ -271,7 +271,7 @@ def WriteFile(url):
 ```
 
 Thanks to `url.split('/')[-1]`, we need a custom service having an endpoint that ends with the filename we want to create.
-For example `HTTP://hostname/50e392a63630e8643c67c87b49934501`. So we can create a simple PHP script inside a folder with that name.
+For example `http://hostname/50e392a63630e8643c67c87b49934501`. So we can create a simple PHP script inside a folder with that name.
 
 Unfortunately, `/download` needs a `Sign`, so we have to obtain a new one.
 
