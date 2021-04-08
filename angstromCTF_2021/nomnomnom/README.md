@@ -1,4 +1,4 @@
-# jailbreak - angstromCTF 2021
+# nomnomnom - angstromCTF 2021
 
 - Category: Web
 - Points: 130
