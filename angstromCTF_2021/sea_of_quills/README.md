@@ -17,24 +17,23 @@ Looking at the code we can see that there is a blacklist implemented to prevent 
 Having the parenthesis we can use a subquery to get the output we want.
 We'll inject our subquery in the "cols" field.
 
-We need first to enumerate the table names of the database.
+We need first to enumerate the table name and structures of the database.
 To do so, the query should be: 
 
 ```
-SELECT name FROM sqlite_master
+SELECT sql FROM sqlite_master
 ```
 
 Now, we can't use this query because we column name should be just one while this query probably returns more than one rows, so we should use the group_concat function to get just one output from the query.
 
 ```
-SELECT group_concat(name) FROM sqlite_master
+SELECT group_concat(sql) FROM sqlite_master
 ```
 
 ![table name](pictures/table_names.png)
 
 So there are two tables in this database, `quills` and `flagtable`.
-We are interested in `flagtable` table.
-So we try to guess the column name of the flag table, trying with `flag`!
+We are interested in `flagtable` table, where probably the flag is stored, we see also that it has a column called `flag`.
 
 ```
 SELECT flag FROM flagtable
