@@ -1,0 +1,4 @@
+{"invoice_number": "SECRET_ENO_TOKEN", "item": "delicious-stuff", "name": "somebody", "time": "2020-05-21 22:28:05,859", "amount": "9.99", "note": ""}
+{"invoice_number": "2176705818", "item": "test-item", "name": "c31cd0b4f7a47ee2", "time": "2020-05-23 12:07:56,456", "amount": "555.55", "note": ""}
+{"invoice_number": "806968347", "item": "test-item", "name": "c31cd0b4f7a47ee2", "time": "2020-05-23 12:07:56,461", "amount": "444.44", "note": ""}
+{"invoice_number": "862637487", "item": "test-item", "name": "009f1b2e138177fb", "time": "2020-05-21 22:00:00,000", "amount": "555.55", "note": ""}

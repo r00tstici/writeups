@@ -1,0 +1,81 @@
+version: '3.4'
+
+services:
+  ringring:
+    build:
+      context: .
+      dockerfile: App/Dockerfile
+    environment:
+    - PGPASSWORD=mysecretpassword
+    - PGHOST=ringring-postgres
+    - INVOICE_HOST=ringring-invoices
+    networks:
+    - room-service
+    - accounting
+    ports:
+      - "7353:7353"
+    container_name: ringring
+
+  ringring-invoices:
+    build:
+      context: .
+      dockerfile: InvoiceApp/Dockerfile
+    environment:
+      - PGPASSWORD=mysecretpassword
+      - PGHOST=invoices-postgres
+    networks:
+    - accounting
+    container_name: ringring-invoices
+    volumes:
+    - ringring_invoice_data:/InvoiceApp/accounting/
+
+  ringring-postgres:
+    build:
+      context: .
+      dockerfile: Postgres/Dockerfile
+    environment:
+    - POSTGRES_PASSWORD=mysecretpassword
+    - POSTGRES_USER=ringring
+    - POSTGRES_DB=service
+    networks:
+    - room-service
+    container_name: ringring-postgres
+    command: postgres -c config_file=/etc/postgresql.conf
+    volumes:
+    - ringring_pg_data:/var/lib/postgresql/data
+    - ./Postgres/postgresql.conf:/etc/postgresql.conf
+
+  invoices-postgres:
+    build:
+      context: .
+      dockerfile: InvoicePostgres/Dockerfile
+    environment:
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_USER=ringring
+      - POSTGRES_DB=invoice
+    networks:
+    - accounting
+    container_name: invoices-postgres
+    command: postgres -c config_file=/etc/postgresql.conf
+    volumes:
+      - invoice_pg_data:/var/lib/postgresql/data
+      - ./InvoicePostgres/postgresql.conf:/etc/postgresql.conf
+
+  rotator_cron:
+    build:
+      context: .
+      dockerfile: RotatorCronJob/Dockerfile
+    networks:
+    - accounting
+    container_name: rotator_cron
+    volumes:
+      - ringring_invoice_data:/InvoiceApp/accounting/
+
+volumes:
+  ringring_pg_data:
+  invoice_pg_data:
+  ringring_invoice_data:
+
+networks:
+  room-service:
+  accounting:

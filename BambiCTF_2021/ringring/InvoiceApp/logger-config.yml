@@ -1,0 +1,44 @@
+formatters:
+  simple:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  invoice:
+    format: '{{"invoice_number": "%(invoice_number)s", "item": "%(item)s", "name": "%(guest_name)s", "time": "%(asctime)s", "amount": "%(amount)s", "note": "%(note)s"}}'
+handlers:
+  console:
+    class: logging.StreamHandler
+    formatter: simple
+    stream: ext://sys.stdout
+  settled_invoices:
+    class: logging.FileHandler
+    filename: accounting/settled-invoices.log
+    mode: a
+    filters: [settled_invoices_only]
+    formatter: invoice
+  outstanding_invoices:
+    class: logging.FileHandler
+    filename: accounting/outstanding-invoices.log
+    mode: a
+    filters: [outstanding_invoices_only]
+    formatter: invoice
+filters:
+  settled_invoices_only:
+    (): app.InvoiceFilter
+    payment_type: {payment_type}
+    invoice_status: settled
+  outstanding_invoices_only:
+    (): app.InvoiceFilter
+    payment_type: {payment_type}
+    invoice_status: outstanding
+loggers:
+  invoice_controller:
+    handlers:
+    - console
+    - settled_invoices
+    - outstanding_invoices
+    level: {level}
+    propagate: false
+root:
+  handlers:
+  - console
+  level: DEBUG
+version: 1
