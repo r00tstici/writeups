@@ -83,19 +83,19 @@ if __name__ == '__main__':
 
 ```
 
-When we open the connection with it, we can perform two simple operations through the menu.
+When we open the connection, we can perform two simple operations through the menu.
 
 - [G]et The encrypted flag
 
 - [T]est the encryption
 
-The server uses AES CBC to encrypt
+The server uses AES CBC to encrypt, key and IV are generated only ones by the function **keygen()**
 
-if we select the first option, the server gives us the encrypted flag. The key and the IV are generated only ones when the connection starts by the function **keygen()**.
+if we select the first option, the server gives us the encrypted flag.
 
-instead if we select the second option, the server asks us a 32 byte message to encrypt, then it gives the first 14 bytes of the key and a part of the encrypted text. In fact we know only the second block and a few byte of the first.
+instead if we select the second option, the server asks us a 32 byte message to encrypt and as output we have the first 14 bytes of the key and a part of the encrypted text, in fact we know only the whole second block and a few byte of the first.
 
-The goal is to find the key, the first block of the ciphertext and the IV in such a way we can decrypt the flag.
+the goal is to find key and IV to decrypt the flag.
 
 ## SOLUTION:
 
@@ -103,7 +103,7 @@ this is the decryption schema of AES CBC:
 
 ![](AES_CBC_decryption.png)
 
-for the tests i sent to the server this fake flag:
+for testing i sent to the server this fake flag:
 
 **CCTF{xxxxxxxxxxxxxxxxxxxxxxxxxx}**
 
@@ -111,8 +111,6 @@ for the tests i sent to the server this fake flag:
 * ciphertext2 --> second ciphertext block
 * plaintext1 --> first plaintext block
 * plaintext2 --> second plaintext block
-
-
 
 #### Ask to the server the mask\_enc and the key\_enc:
 
@@ -142,8 +140,7 @@ key = key[:-4].decode()
 enc = enc.replace(b"*", b"0")
 ```
 
-the number of known bytes of the ciphertext1 is random and max 2, so i ask to decrypt the message until i get the first two byte of the first block.
-
+the number of known bytes of ciphertext1 is random and max 2, so i ask to decrypt the message until i get the first two bytes.
 
 #### Find the key:
 
@@ -167,7 +164,7 @@ def bruteforce_key():
 
 #### Find the whole first ciphertext block:
 
-The idea is that we can reverse the roles of the ciphertext1 and plaintext2 in such a way that when the ciphertext2 is decrypted, is done the xor operation with the known plaintext2 and we get the ciphertext1.
+The idea is that we can reverse the roles of the ciphertext1 and plaintext2 so that when the ciphertext2 is decrypted, is performed the xor operation with the known plaintext2 and we get the ciphertext1.
 
 ```python
 def findCipher1(key):
