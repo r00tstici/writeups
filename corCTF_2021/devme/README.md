@@ -1,4 +1,4 @@
-# CShell - corCTF 2021
+# devme - corCTF 2021
 
 - Category: Web
 - Points: 323

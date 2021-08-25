@@ -1,9 +1,9 @@
-# CShell - corCTF 2021
+# YeetCode - corCTF 2021
 
-- Category: Pwn
-- Points: 459
-- Solves: 81
-- Solved by: drw0if - hdesk
+- Category: Misc
+- Points: 402
+- Solves: 165
+- Solved by: Iregon
 
 ## Description
 
