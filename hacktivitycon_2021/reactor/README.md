@@ -15,6 +15,7 @@ We are provided with an `android apk` file, installing it on an emulator we are 
 ![main_screen](images/apk_screen.png)
 
 If we provide a pin we can see a string popping out:
+
 ![decoded_screen](images/decoded.png)
 
 This string seems not to be the flag, tho.
