@@ -19,11 +19,11 @@ To encrypt is used AES with CBC as mode of operation, in this way:
 
 cipher = AES.new(self.triforce, AES.MODE_CBC, iv=self.triforce)
 
-# self.triforce = [first_flag_block, second_flag_block, third_flag_block]
+# self.triforce is one of [first_flag_block, second_flag_block, third_flag_block] and is choosen by user.
 
 ```
 
-Also our plaintext is padded when we encrypt, but one important thing is that we don't get any error messages when we decrypt also that the padding is wrong
+Also our plaintext is padded when we encrypt, but one important thing is that we don't get any error messages when we decrypt also if the padding is wrong
 
 ```python
 
@@ -56,7 +56,7 @@ def decrypt_sacred_saying(self, triforce):
 
 ```
 
-The goal is choose one of the three blocks of flag and recover the IV.
+The goal is to choose one of the three flag blocks and recover the IV.
 
 ### SOLUTION:
 
