@@ -13,13 +13,13 @@ Challenge Link : http://198.211.115.81:9003/
 
 The challenge consists of a simple PHP calculator that evaluates math expressions. 
 
-![alt text](./pictures/1.png)
+![alt text](./pictures/1.PNG)
 
 
 If you try to insert symbols like letters you'll receive a PHP error referred to `eval()` function, perhaps we can inject PHP scripts... let's try with this payload `1-1;echo("hello")`:
 
 
-![alt text](./pictures/2.png)
+![alt text](./pictures/2.PNG)
 <p>...it works!<br>
 There's a comment into the web page: </p>
 
@@ -34,8 +34,8 @@ There's a comment into the web page: </p>
 
 so we have to read the file flag.txt... Let's use the PHP `system()` function to execute os commands like `ls` and `cat`:
 
-![alt text](./pictures/3.png)
-![alt text](./pictures/4.png)
+![alt text](./pictures/3.PNG)
+![alt text](./pictures/4.PNG)
 
 ## Flag
 ```
