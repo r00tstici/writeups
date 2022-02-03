@@ -55,7 +55,7 @@ if(isset($_GET['file'])){
 well, now we know the secret file name! Let's include it and get the flag:
 
 
-![alt text](./pictures/1.png)
+![alt text](./pictures/1.PNG)
 
 ## Flag
 `KCTF{L0C4L_F1L3_1ncLu710n}`
