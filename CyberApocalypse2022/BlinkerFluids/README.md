@@ -13,6 +13,10 @@ Category: Web
 
 Points: 300
 
+Files:
+
+- [web_blinkerfluids.zip](web_blinkerfluids.zip)
+
 ## Writeup
 
 Opening the challenge site we can see a list of some invoices, that are available for download in PDF format.
