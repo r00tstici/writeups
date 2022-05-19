@@ -12,13 +12,13 @@ Ramona's obsession with modifications and the addition of artifacts to her body 
 
 This challenge consists of a netcat service that allows the user to create artifacts and zip them.
 
-![1](pictures/1.png)
+![1](pictures/1.PNG)
 
 The goal is to execute arbitrary os commands and retrieve the flag. 
 
 Let's create a file by using the first option:
 
-![2](pictures/2.png)
+![2](pictures/2.PNG)
 
 and then let's exploit the service by using the third option. In particular it permits to `cat` a file by specifing the name. We can use the  command separator `;` and execute other commands, for example:
 
