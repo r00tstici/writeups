@@ -13,6 +13,10 @@ The mystery that Miyuki is trying to solve is, how the satellite's location was 
 Help her analyse the Council's HQ event logs and solve this mystery.
 ```
 
+Category: Forensics
+
+Points: 300
+
 Files:
 
 - [forensics_puppeteer.zip](forensics_puppeteer.zip)
