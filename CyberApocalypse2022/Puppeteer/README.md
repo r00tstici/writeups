@@ -1,10 +1,6 @@
 # Puppeteer
 
-## Challenge
-
-Forensics
-
-Points: 300
+## Description
 
 ```
 Planet Longhir is known for it's top-tier researchers.
